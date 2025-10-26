@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leithman-Bach Market Research & Growth Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F0F4F8;
+            color: #333333;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+        .small-chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+            .small-chart-container {
+                height: 350px;
+            }
+        }
+        .kpi-card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .kpi-number {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        .kpi-label {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #6B7280;
+            margin-top: 0.5rem;
+        }
+        .main-card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-[#F0F4F8]">
+
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-[#00449E] mb-3">Market Research & Digital Growth Strategy</h1>
+            <h2 class="text-2xl font-semibold text-[#FF6B6B]">Leithman-Bach Surgical</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto mt-2">An analysis of the current market position, competitor landscape, and a data-driven strategy for scalable growth.</p>
+        </header>
+
+        <section class="mb-8">
+            <h3 class="text-2xl font-bold text-[#00449E] mb-4">Executive Summary: The Current Benchmark</h3>
+            <p class="text-base text-gray-700 mb-6 max-w-4xl">
+                Leithman-Bach is a B2B supplier of surgical instruments operating in a market dominated by industry giants.
+                Our current online footprint is minimal, representing a significant gap between our position and even niche competitors. This gap is our single greatest opportunity.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="kpi-card">
+                    <div class="kpi-number text-[#00449E]">1.4K</div>
+                    <div class="kpi-label">Leithman-Bach Est. Monthly Traffic</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number text-[#FF6B6B]">17.5K</div>
+                    <div class="kpi-label">Direct Competitor (medlinesurgical.com)</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-number text-gray-500">23.9M</div>
+                    <div class="kpi-label">Market Leader (medtronic.com)</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-card mb-8">
+            <h3 class="text-2xl font-bold text-[#00449E] mb-4">The Competitive Landscape</h3>
+            <p class="text-base text-gray-700 mb-6">
+                The market is highly concentrated. Leithman-Bach currently captures a negligible portion of online traffic.
+                Our primary digital competitor is <code class="text-sm bg-gray-100 p-1 rounded">medlinesurgical.com</code>, a niche player who is still 12x larger in traffic. The industry giants (Medtronic, BD) define the overall market size.
+            </p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="p-3 font-semibold text-sm text-gray-600 uppercase border-b">Competitor</th>
+                            <th class="p-3 font-semibold text-sm text-gray-600 uppercase border-b text-right">Est. Monthly Traffic</th>
+                            <th class="p-3 font-semibold text-sm text-gray-600 uppercase border-b text-right">Organic Keywords</th>
+                            <th class="p-3 font-semibold text-sm text-gray-600 uppercase border-b text-right">Est. Traffic Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="font-bold bg-blue-50">
+                            <td class="p-3 text-[#00449E]">leithman-bach.com</td>
+                            <td class="p-3 text-[#00449E] text-right">1,400</td>
+                            <td class="p-3 text-[#00449E] text-right">761</td>
+                            <td class="p-3 text-[#00449E] text-right">$244</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3">medlinesurgical.com</td>
+                            <td class="p-3 text-right">17,500</td>
+                            <td class="p-3 text-right">6,700</td>
+                            <td class="p-3 text-right">$7,500</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600">cardinalhealth.ca</td>
+                            <td class="p-3 text-right text-gray-600">819,000</td>
+                            <td class="p-3 text-right text-gray-600">126,000</td>
+                            <td class="p-3 text-right text-gray-600">$105,000</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600">stryker.com</td>
+                            <td class="p-3 text-right text-gray-600">8,300,000</td>
+                            <td class="p-3 text-right text-gray-600">711,000</td>
+                            <td class="p-3 text-right text-gray-600">$652,000</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600">bd.com</td>
+                            <td class="p-3 text-right text-gray-600">15,500,000</td>
+                            <td class="p-3 text-right text-gray-600">1,100,000</td>
+                            <td class="p-3 text-right text-gray-600">$836,000</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 text-gray-600">medtronic.com</td>
+                            <td class="p-3 text-right text-gray-600">23,900,000</td>
+                            <td class="p-3 text-right text-gray-600">1,900,000</td>
+                            <td class="p-3 text-right text-gray-600">$1,700,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="main-card mb-8">
+            <h3 class="text-2xl font-bold text-[#00449E] mb-4">Canadian Market Search Trends (5-Year)</h3>
+            <p class="text-base text-gray-700 mb-6">
+                Google Trends data for Canada shows that "Surgical Instruments" is the dominant search term, with sporadic but significant peaks in interest. Other categories like "Laparoscopy Equipment" and "Sterilization Containers" have very low but occasional search volume. This indicates a consistent, underlying demand for the primary product category.
+            </p>
+            <div class="chart-container">
+                <canvas id="trendsChart"></canvas>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div class="main-card">
+                <h3 class="text-2xl font-bold text-[#00449E] mb-4">Canadian Regional Interest</h3>
+                <p class="text-base text-gray-700 mb-6">
+                    Interest in "Surgical Instruments" is widespread across Canada. Alberta and Newfoundland show the highest relative search interest, but all major provinces show strong signals. This suggests a nationwide target market.
+                </p>
+                <div class="small-chart-container" style="height: 400px;">
+                    <canvas id="regionalChart"></canvas>
+                </div>
+            </div>
+            <div class="main-card">
+                <h3 class="text-2xl font-bold text-[#00449E] mb-4">The Keyword Opportunity Gap</h3>
+                <p class="text-base text-gray-700 mb-6">
+                    Leithman-Bach is missing out on ~5,900 relevant keywords that our direct competitor <code class="text-sm bg-gray-100 p-1 rounded">medlinesurgical.com</code> ranks for. Our current rankings are heavily branded. The "Missing" and "Weak" keywords are our primary SEO target.
+                </p>
+                <div class="small-chart-container" style="height: 400px;">
+                    <canvas id="keywordGapChart"></canvas>
+                </div>
+            </div>
+        </section>
+        
+        <section class="main-card mb-8">
+            <h3 class="text-2xl font-bold text-[#00449E] mb-4">High-Potential Keyword Categories</h3>
+            <p class="text-base text-gray-700 mb-6">
+                Analysis of Google Trends and competitor data reveals clear opportunities for content marketing and SEO. Rising terms represent immediate demand, while informational queries can attract top-of-funnel traffic.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-800 border-b-2 border-[#FF6B6B] pb-2 mb-3">Top Rising Queries (High Intent)</h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>kelly forceps (Breakout)</li>
+                        <li>cooper surgical (Breakout)</li>
+                        <li>surgical instruments with names</li>
+                        <li>common surgical instruments</li>
+                        <li>orthopedic surgical instruments</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-gray-800 border-b-2 border-[#00449E] pb-2 mb-3">Top Informational Queries (Content Ideas)</h4>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>medical instruments</li>
+                        <li>forceps</li>
+                        <li>cleaning surgical instruments</li>
+                        <li>veterinary surgical instruments</li>
+                        <li>types of surgical instruments</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="main-card mb-8">
+            <h3 class="text-2xl font-bold text-[#00449E] mb-4">SWOT Analysis</h3>
+            <p class="text-base text-gray-700 mb-6">
+                This analysis outlines our strategic position, highlighting the critical weakness in digital presence which is directly contrasted by the massive opportunity in untapped keyword markets.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                    <h4 class="text-xl font-bold text-green-800 mb-2">Strengths</h4>
+                    <ul class="list-disc list-inside space-y-1 text-green-700">
+                        <li>Established business with clear product categories</li>
+                        <li>E-commerce functionality is in place (WooCommerce)</li>
+                        <li>Niche focus allows for potential agility</li>
+                    </ul>
+                </div>
+                <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                    <h4 class="text-xl font-bold text-red-800 mb-2">Weaknesses</h4>
+                    <ul class="list-disc list-inside space-y-1 text-red-700">
+                        <li>Extremely low website traffic and market share</li>
+                        <li>Poor non-brand organic keyword rankings</li>
+                        <li>Minimal brand recognition in the digital space</li>
+                    </ul>
+                </div>
+                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <h4 class="text-xl font-bold text-yellow-800 mb-2">Opportunities</h4>
+                    <ul class="list-disc list-inside space-y-1 text-yellow-700">
+                        <li>Massive "Keyword Gap" of over 5,900 terms</li>
+                        <li>High-intent "Rising" queries (e.g., kelly forceps)</li>
+                        <li>Google Ads forecast shows high potential (8.9%+ CVR)</li>
+                        <li>Content marketing for informational queries</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg border border-gray-300">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Threats</h4>
+                    <ul class="list-disc list-inside space-y-1 text-gray-700">
+                        <li>Market domination by giants (Medtronic, BD, Stryker)</li>
+                        <li>Direct competitors are significantly more established online</li>
+                        <li>Long B2B sales cycles can be hard to penetrate</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8">
+            <h3 class="text-3xl font-extrabold text-[#00449E] mb-6 text-center">Digital Growth Strategy & Revenue Targets</h3>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 main-card">
+                    <h4 class="text-2xl font-bold text-[#00449E] mb-4">1. Google Ads Forecast (US Market)</h4>
+                    <p class="text-base text-gray-700 mb-6">
+                        A modest $30/day budget in the US market is forecast to generate significant returns. The projected 8.91% conversion rate is extremely high, suggesting that targeted, high-intent keywords can drive immediate leads. Mobile traffic is projected to bring the most clicks.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="kpi-card !text-left !p-4">
+                            <div class="kpi-label">Est. Monthly Budget</div>
+                            <div class="kpi-number text-[#00449E] text-4xl">$900</div>
+                        </div>
+                        <div class="kpi-card !text-left !p-4">
+                            <div class="kpi-label">Est. Monthly Conversions</div>
+                            <div class="kpi-number text-[#06D6A0] text-4xl">230</div>
+                        </div>
+                        <div class="kpi-card !text-left !p-4">
+                            <div class="kpi-label">Est. Conversion Rate</div>
+                            <div class="kpi-number text-gray-800 text-4xl">8.91%</div>
+                        </div>
+                        <div class="kpi-card !text-left !p-4">
+                            <div class="kpi-label">Est. Average CPA</div>
+                            <div class="kpi-number text-gray-800 text-4xl">$3.86</div>
+                        </div>
+                    </div>
+                    <div class="small-chart-container mt-6">
+                        <canvas id="deviceChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="main-card">
+                    <h4 class="text-2xl font-bold text-[#00449E] mb-4">2. Growth & Revenue Targets</h4>
+                    <p class="text-base text-gray-700 mb-6">
+                        The primary goal is to close the gap with niche competitors. Based on an estimated Average Order Value (AOV) of $500, the ad forecast alone projects over $100k in monthly revenue.
+                    </p>
+                    
+                    <div class="small-chart-container mb-6">
+                        <canvas id="trafficGoalChart"></canvas>
+                    </div>
+
+                    <div class="kpi-card bg-green-50 border border-green-200">
+                        <div class="kpi-number text-[#06D6A0]">$115,000</div>
+                        <div class="kpi-label">Projected Monthly Ad-Driven Revenue</div>
+                        <p class="text-xs text-gray-500 mt-2">(Based on 230 conversions at $500 AOV)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div classs="main-card mt-8">
+                <h4 class="text-2xl font-bold text-[#00449E] mb-4 mt-10">3. Strategic Initiatives</h4>
+                <p class="text-base text-gray-700 mb-6">
+                    A 3-pronged strategy will be implemented to build a foundation, capture existing demand, and create new demand.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="main-card border-t-4 border-[#00449E]">
+                        <div class="text-4xl mb-3">⚙️</div>
+                        <h5 class="text-xl font-bold text-gray-800 mb-2">Technical SEO</h5>
+                        <p class="text-sm text-gray-600 mb-3">Build the foundation for organic growth.</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                            <li>Optimize site speed & mobile-friendliness</li>
+                            <li>Implement product schema markup</li>
+                            <li>Update website (e.g., copyright 2025)</li>
+                            <li>Fix broken links & improve internal linking</li>
+                        </ul>
+                    </div>
+                    <div class="main-card border-t-4 border-[#FF6B6B]">
+                        <div class="text-4xl mb-3">✍️</div>
+                        <h5 class="text-xl font-bold text-gray-800 mb-2">Content Marketing</h5>
+                        <p class="text-sm text-gray-600 mb-3">Capture the "Keyword Gap" and build authority.</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                            <li>Create detailed product pages for "Missing" keywords</li>
+                            <li>Develop blog/resource center targeting informational queries</li>
+                            <li>Create "How to Clean Surgical Instruments" guide</li>
+                            <li>Publish "Types of Forceps and Their Uses"</li>
+                        </ul>
+                    </div>
+                    <div class="main-card border-t-4 border-[#06D6A0]">
+                        <div class="text-4xl mb-3">🎯</div>
+                        <h5 class="text-xl font-bold text-gray-800 mb-2">Paid Advertising</h5>
+                        <p class="text-sm text-gray-600 mb-3">Drive immediate conversions and revenue.</p>
+                        <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                            <li>Launch $30/day campaign in US & Canada</li>
+                            <li>Target high-intent keywords ("buy surgical...", "kelly forceps")</li>
+                            <li>Target high-interest Canadian provinces</li>
+                            <li>Optimize for 8.9%+ conversion rate</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const colors = {
+                darkBlue: '#00449E',
+                red: '#FF6B6B',
+                yellow: '#FFD166',
+                green: '#06D6A0',
+                gray: '#6B7280'
+            };
+
+            function processLabels(labels) {
+                return labels.map(label => {
+                    if (typeof label === 'string' && label.length > 16) {
+                        const words = label.split(' ');
+                        const lines = [];
+                        let currentLine = '';
+                        words.forEach(word => {
+                            if ((currentLine + word).length > 16 && currentLine.length > 0) {
+                                lines.push(currentLine.trim());
+                                currentLine = word + ' ';
+                            } else {
+                                currentLine += word + ' ';
+                            }
+                        });
+                        lines.push(currentLine.trim());
+                        return lines;
+                    }
+                    return label;
+                });
+            }
+
+            const requiredTooltipCallback = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            };
+
+            const trendsData = {
+                weeks: ['2020-10-25', '2020-11-01', '2020-11-08', '2020-11-15', '2020-11-22', '2020-11-29', '2020-12-06', '2020-12-13', '2020-12-20', '2020-12-27', '2021-01-03', '2021-01-10', '2021-01-17', '2021-01-24', '2021-01-31', '2021-02-07', '2021-02-14', '2021-02-21', '2021-02-28', '2021-03-07', '2021-03-14', '2021-03-21', '2021-03-28', '2021-04-04', '2021-04-11', '2021-04-18', '2021-04-25', '2021-05-02', '2021-05-09', '2021-05-16', '2021-05-23', '2021-05-30', '2021-06-06', '2021-06-13', '2021-06-20', '2021-06-27', '2021-07-04', '2021-07-11', '2021-07-18', '2021-07-25', '2021-08-01', '2021-08-08', '2021-08-15', '2021-08-22', '2021-08-29', '2021-09-05', '2021-09-12', '2021-09-19', '2021-09-26', '2021-10-03', '2021-10-10', '2021-10-17', '2021-10-24', '2021-10-31', '2021-11-07', '2021-11-14', '2021-11-21', '2021-11-28', '2021-12-05', '2021-12-12', '2021-12-19', '2021-12-26', '2022-01-02', '2022-01-09', '2022-01-16', '2022-01-23', '2022-01-30', '2022-02-06', '2022-02-13', '2022-02-20', '2022-02-27', '2022-03-06', '2022-03-13', '2022-03-20', '2022-03-27', '2022-04-03', '2022-04-10', '2022-04-17', '2022-04-24', '2022-05-01', '2022-05-08', '2022-05-15', '2022-05-22', '2022-05-29', '2022-06-05', '2022-06-12', '2022-06-19', '2022-06-26', '2022-07-03', '2022-07-10', '2022-07-17', '2022-07-24', '2022-07-31', '2022-08-07', '2022-08-14', '2022-08-21', '2022-08-28', '2022-09-04', '2022-09-11', '2022-09-18', '2022-09-25', '2022-10-02', '2022-10-09', '2022-10-16', '2022-10-23', '2022-10-30', '2022-11-06', '2022-11-13', '2022-11-20', '2022-11-27', '2022-12-04', '2022-12-11', '2022-12-18', '2022-12-25', '2023-01-01', '2023-01-08', '2023-01-15', '2023-01-22', '2023-01-29', '2023-02-05', '2023-02-12', '2023-02-19', '2023-02-26', '2023-03-05', '2023-03-12', '2023-03-19', '2023-03-26', '2023-04-02', '2023-04-09', '2023-04-16', '2023-04-23', '2023-04-30', '2023-05-07', '2023-05-14', '2023-05-21', '2023-05-28', '2023-06-04', '2023-06-11', '2023-06-18', '2023-06-25', '2023-07-02', '2023-07-09', '2023-07-16', '2023-07-23', '2023-07-30', '2023-08-06', '2023-08-13', '2023-08-20', '2023-08-27', '2023-09-03', '2023-09-10', '2023-09-17', '2023-09-24', '2023-10-01', '2023-10-08', '2023-10-15', '2023-10-22', '2023-10-29', '2023-11-05', '2023-11-12', '2023-11-19', '2023-11-26', '2023-12-03', '2023-12-10', '2023-12-17', '2023-12-24', '2023-12-31', '2024-01-07', '2024-01-14', '2024-01-21', '2024-01-28', '2024-02-04', '2024-02-11', '2024-02-18', '2024-02-25', '2024-03-03', '2024-03-10', '2024-03-17', '2024-03-24', '2024-03-31', '2024-04-07', '2024-04-14', '2024-04-21', '2024-04-28', '2024-05-05', '2024-05-12', '2024-05-19', '2024-05-26', '2024-06-02', '2024-06-09', '2024-06-16', '2024-06-23', '2024-06-30', '2024-07-07', '2024-07-14', '2024-07-21', '2024-07-28', '2024-08-04', '2024-08-11', '2024-08-18', '2024-08-25', '2024-09-01', '2024-09-08', '2024-09-15', '2024-09-22', '2024-09-29', '2024-10-06', '2024-10-13', '2024-10-20', '2024-10-27', '2024-11-03', '2024-11-10', '2024-11-17', '2024-11-24', '2024-12-01', '2024-12-08', '2024-12-15', '2024-12-22', '2024-12-29', '2025-01-05', '2025-01-12', '2025-01-19', '2025-01-26', '2025-02-02', '2025-02-09', '2025-02-16', '2025-02-23', '2025-03-02', '2025-03-09', '2025-03-16', '2025-03-23', '205-03-30', '2025-04-06', '2025-04-13', '2025-04-20', '2025-04-27', '2025-05-04', '2025-05-11', '2025-05-18', '2025-05-25', '2025-06-01', '2025-06-08', '2025-06-15', '2025-06-22', '2025-06-29', '2025-07-06', '2025-07-13', '2025-07-20', '2025-07-27', '2025-08-03', '2025-08-10', '2025-08-17', '2025-08-24', '2025-08-31', '2025-09-07', '2025-09-14', '2025-09-21', '2025-09-28', '2025-10-05', '2025-10-12', '2025-10-19', '2025-10-26'],
+                surgical: [0, 50, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 100, 0, 0, 0, 0, 0, 0, 47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 84, 0, 0, 0, 0, 52, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 0, 0, 44, 0, 0, 0, 39, 0, 46, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 62, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 50, 46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 69, 0, 0, 0, 0, 0, 0, 0, 0, 0, 49, 56, 0, 0, 0, 0, 50, 0, 0, 0, 0, 49, 0, 0, 0, 0, 0, 0, 0, 46, 59, 0, 58, 0, 0, 0, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 52, 0, 0, 0, 73, 0, 0, 65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 0, 0, 0, 0, 0, 0, 0, 53, 0, 0, 0, 0, 65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 29, 32, 28],
+                laparoscopy: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                endoscopes: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                electrosurgery: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                sterilization: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            };
+
+            const trendsCtx = document.getElementById('trendsChart').getContext('2d');
+            new Chart(trendsCtx, {
+                type: 'line',
+                data: {
+                    labels: trendsData.weeks,
+                    datasets: [
+                        {
+                            label: 'Surgical Instruments',
+                            data: trendsData.surgical,
+                            borderColor: colors.darkBlue,
+                            backgroundColor: 'rgba(0, 68, 158, 0.1)',
+                            fill: true,
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Laparoscopy Equipment',
+                            data: trendsData.laparoscopy,
+                            borderColor: colors.red,
+                            backgroundColor: 'rgba(255, 107, 107, 0.1)',
+                            fill: false,
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Sterilization Containers',
+                            data: trendsData.sterilization,
+                            borderColor: colors.green,
+                            backgroundColor: 'rgba(6, 214, 160, 0.1)',
+                            fill: false,
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'year'
+                            },
+                            title: {
+                                display: true,
+                                text: 'Date'
+                            },
+                            ticks: {
+                                autoSkip: true,
+                                maxTicksLimit: 10
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Relative Search Interest'
+                            }
+                        }
+                    },
+                    ...requiredTooltipCallback
+                }
+            });
+
+            const regionalCtx = document.getElementById('regionalChart').getContext('2d');
+            const regionalLabels = processLabels(['Alberta', 'Ontario', 'Newfoundland and Labrador', 'Saskatchewan', 'Nova Scotia', 'New Brunswick', 'British Columbia', 'Manitoba', 'Québec']);
+            new Chart(regionalCtx, {
+                type: 'bar',
+                data: {
+                    labels: regionalLabels,
+                    datasets: [{
+                        label: 'Relative Interest in "Surgical Instruments"',
+                        data: [100, 94, 100, 100, 100, 100, 96, 100, 100],
+                        backgroundColor: [
+                            colors.darkBlue, colors.red, colors.yellow, colors.green, 
+                            colors.gray, 'rgba(0, 68, 158, 0.7)', 'rgba(255, 107, 107, 0.7)', 
+                            'rgba(255, 209, 102, 0.7)', 'rgba(6, 214, 160, 0.7)'
+                        ],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    scales: {
+                        x: {
+                            beginAtZero: true
+                        }
+                    },
+                    ...requiredTooltipCallback
+                }
+            });
+
+            const keywordGapCtx = document.getElementById('keywordGapChart').getContext('2d');
+            new Chart(keywordGapCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Shared Keywords', 'Missing Keywords', 'Weak Keywords', 'Unique Keywords'],
+                    datasets: [{
+                        label: 'Keyword Gap vs. medlinesurgical.com',
+                        data: [747, 5900, 1500, 483],
+                        backgroundColor: [colors.green, colors.red, colors.yellow, colors.darkBlue]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...requiredTooltipCallback,
+                    plugins: {
+                        ...requiredTooltipCallback.plugins,
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            const deviceCtx = document.getElementById('deviceChart').getContext('2d');
+            new Chart(deviceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Mobile', 'Desktop', 'Tablet'],
+                    datasets: [{
+                        label: 'Est. Clicks by Device',
+                        data: [1356.58, 1200.4, 59.63],
+                        backgroundColor: [colors.darkBlue, colors.red, colors.yellow],
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...requiredTooltipCallback
+                }
+            });
+
+            const trafficGoalCtx = document.getElementById('trafficGoalChart').getContext('2d');
+            new Chart(trafficGoalCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Current Monthly Traffic', '12-Month Goal'],
+                    datasets: [{
+                        label: 'Traffic Growth Target',
+                        data: [1400, 7500],
+                        backgroundColor: [colors.gray, colors.green]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...requiredTooltipCallback,
+                    plugins: {
+                        ...requiredTooltipCallback.plugins,
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
