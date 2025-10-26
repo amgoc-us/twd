@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interwood Digital Market Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .chart-container-wide {
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl md:text-3xl font-bold text-[#0D47A1]">Interwood Digital Strategy Report</h1>
+            <span class="font-semibold text-gray-700">Prepared by Trends Hive</span>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="summary" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Executive Summary & Market Position</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Interwood stands as a benchmark for premium furniture and interior solutions in Pakistan. This analysis of your digital footprint, search trends, and paid advertising forecast reveals significant strengths. However, it also highlights key opportunities for optimization and expansion to capture emerging markets and fend off new digital-first competitors. This report outlines a data-driven strategy to scale revenue and solidify market dominance.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Core Business Focus</h3>
+                    <p class="text-gray-600 mb-4">Interwood's diverse portfolio is a primary strength, with "Home Furniture" and "Kitchens" representing the largest segments, complemented by significant B2B sales in "Office Furniture" and "Doors."</p>
+                    <div class="chart-container" style="height: 300px; max-height: 300px;">
+                        <canvas id="categoryPieChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Google Ads Forecast (Nov. 2025)</h3>
+                    <p class="text-gray-600 mb-4">The upcoming campaign forecast shows a strong, high-intent audience. With a $30 daily budget, the potential is excellent, especially with a healthy 4.05% conversion rate and a low $4.11 Cost Per Acquisition (CPA).</p>
+                    <div class="grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <span class="text-4xl font-bold text-[#00796B]">5.4K</span>
+                            <span class="block text-gray-600">Est. Clicks</span>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <span class="text-4xl font-bold text-[#00796B]">220</span>
+                            <span class="block text-gray-600">Est. Conversions</span>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <span class="text-4xl font-bold text-[#FF8F00]">$0.17</span>
+                            <span class="block text-gray-600">Avg. CPC</span>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <span class="text-4xl font-bold text-[#FF8F00]">4.05%</span>
+                            <span class="block text-gray-600">Est. CVR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="trends" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Google Search Landscape (Oct 2024 - Oct 2025)</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Analyzing search behavior reveals user intent and seasonality. "Furniture" remains the dominant, high-volume search term. However, "Kitchen Design" and "Doors" show consistent, specific interest, while "Office Furniture" is a smaller, niche query. A clear seasonal dip is visible around March-April, with a significant peak in October-November.
+            </p>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Search Term Interest Over Time (Pakistan)</h3>
+                <div class="chart-container-wide">
+                    <canvas id="trendsLineChart"></canvas>
+                </div>
+                <p class="text-gray-600 mt-4"><strong>Key Takeaway:</strong> While "Furniture" provides volume, targeting the "Kitchen Design" and "Doors" keywords during their stable periods can capture high-intent customers. The Oct-Nov peak is the critical sales period to maximize ad spend.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Regional Interest in Growth Categories</h3>
+                    <p class="text-gray-600 mb-4">Search intensity for "Kitchen Design" and "Doors" is highest in developing regions, suggesting new construction and renovation projects are key drivers. Punjab and Sindh, while large markets, show more saturated search interest relative to the "Furniture" baseline.</p>
+                    <div class="chart-container">
+                        <canvas id="regionalInterestChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Rising Competitive Search Terms</h3>
+                    <p class="text-gray-600 mb-4">The "Rising" queries for "Furniture" are almost entirely new, online-first competitors. This signals a major shift. Users are no longer just searching for "furniture"; they are actively searching for these new brands by name.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-center"><span class="text-green-500 font-bold text-lg mr-2">↑</span> "life standard furniture" (+2,950%)</li>
+                        <li class="flex items-center"><span class="text-green-500 font-bold text-lg mr-2">↑</span> "diamond modern furniture" (+600%)</li>
+                        <li class="flex items-center"><span class="text-green-500 font-bold text-lg mr-2">↑</span> "new era furniture" (+250%)</li>
+                        <li class="flex items-center"><span class="text-green-500 font-bold text-lg mr-2">↑</span> "furnishka furniture" (+150%)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="ads" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Paid Advertising Performance & Forecast</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                The Google Ads forecast indicates a critical discrepancy between devices. While Mobile devices drive the vast majority of impressions and clicks, Desktop users are significantly more engaged, boasting a Click-Through Rate (CTR) nearly double that of mobile. This suggests mobile landing pages may not be as optimized, or desktop users are more high-intent for B2B/high-value purchases.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Est. Clicks vs. Cost by Device</h3>
+                    <p class="text-gray-600 mb-4">Mobile accounts for 90% of clicks and 82% of the cost. However, the cost per click (CPC) is much higher on Desktop ($0.35) than on Mobile ($0.15), indicating more competition for desktop users.</p>
+                    <div class="chart-container">
+                        <canvas id="deviceClicksCostChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Est. Impressions Share by Device</h3>
+                    <p class="text-gray-600 mb-4">The campaign's reach is overwhelmingly mobile, with 95% of all ad impressions served on mobile devices. This makes mobile ad creative and landing page experience the single most important factor for top-of-funnel performance.</p>
+                    <div class="chart-container" style="height: 300px; max-height: 300px;">
+                        <canvas id="deviceImpressionsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 mt-6">
+                <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">The Desktop vs. Mobile CTR Gap</h3>
+                <p class="text-gray-600 mb-4">The most significant finding is the engagement gap. Desktop users are far more likely to click an ad, suggesting they are a more qualified, purchase-ready audience, likely for high-value items like kitchens or office furniture.</p>
+                <div class="flex justify-around text-center">
+                    <div>
+                        <span class="text-6xl font-bold text-[#00796B]">7.4%</span>
+                        <span class="block text-2xl text-gray-700">Desktop CTR</span>
+                    </div>
+                    <div>
+                        <span class="text-6xl font-bold text-[#FF8F00]">3.8%</span>
+                        <span class="block text-2xl text-gray-700">Mobile CTR</span>
+                    </div>
+                </div>
+                <p class="text-gray-600 mt-4"><strong>Key Takeaway:</strong> A dual strategy is required. Optimize mobile landing pages for speed and clarity to improve the 3.8% CTR, while creating dedicated, high-conversion funnels for the 7.4% CTR desktop audience.</p>
+            </div>
+        </section>
+
+        <section id="competitors" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Competitive Landscape</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                Interwood's brand is a primary asset, as "interwood" itself is a top search term. However, the Google Trends data proves that new, agile, online-first brands are rapidly gaining significant search traction. These competitors focus on specific niches (e.g., "modern," "minimalist") and are likely capturing market share through aggressive social media and search advertising.
+            </p>
+
+            <div class="bg-white rounded-lg shadow-md p-0 overflow-x-auto">
+                <table class="w-full min-w-[700px]">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th classclass="text-left font-semibold text-gray-600 p-4">Competitor</th>
+                            <th class="text-left font-semibold text-gray-600 p-4">Key Focus</th>
+                            <th class="text-left font-semibold text-gray-600 p-4">Est. Market Share</th>
+                            <th class="text-left font-semibold text-gray-600 p-4">SEO/Digital Strength</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="bg-blue-50">
+                            <td class="p-4 font-semibold text-[#0D47A1]">Interwood (Benchmark)</td>
+                            <td class="p-4">Premium, full-range (Home, Office, Kitchens)</td>
+                            <td class="p-4 font-medium text-gray-800">High</td>
+                            <td class="p-4 font-medium text-gray-800">High (Strong Brand Authority)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold">Life Standard Furniture</td>
+                            <td class="p-4">Modern, contemporary home furniture</td>
+                            <td class="p-4 font-medium text-gray-800">Medium (Rising Fast)</td>
+                            <td class="p-4 font-medium text-red-600">Very High (Breakout Search Trend)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold">Diamond Modern Furniture</td>
+                            <td class="p-4">High-gloss, "modern luxury" segment</td>
+                            <td class="p-4 font-medium text-gray-800">Medium</td>
+                            <td class="p-4 font-medium text-orange-500">High (Strong Growth)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold">Workspace</td>
+                            <td class="p-4">Direct competitor in Office Furniture</td>
+                            <td class="p-4 font-medium text-gray-800">Medium (Niche)</td>
+                            <td class="p-4 font-medium text-gray-800">Medium (Established Niche Player)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-semibold">Local/OLX</td>
+                            <td class="p-4">Low-cost, used, unbranded</td>
+                            <td class="p-4 font-medium text-gray-800">Low (Different Segment)</td>
+                            <td class="p-4 font-medium text-gray-800">Medium (High Traffic Platform)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="swot" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">SWOT Analysis</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                This analysis consolidates Interwood's position, highlighting the core tension between its established brand strength and the threat of new, digitally-native competitors.
+            </p>
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border-l-4 border-green-500 p-4">
+                        <h3 class="text-2xl font-bold text-green-600 mb-2">Strengths</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Premium brand recognition and trust.</li>
+                            <li>Diverse product range (Home, Office, Kitchens).</li>
+                            <li>Strong brand search volume ("interwood").</li>
+                            <li>Established physical retail network.</li>
+                            <li>Sophisticated tech stack (Hubspot, Klaviyo).</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-red-500 p-4">
+                        <h3 class="text-2xl font-bold text-red-600 mb-2">Weaknesses</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Lower mobile CTR (3.8%) vs. Desktop (7.4%).</li>
+                            <li>Potential for slow adaptation vs. agile startups.</li>
+                            <li>Higher price point may be a barrier for online-first customers.</li>
+                            <li>Website rank (#783,043) is solid but has room for SEO growth.</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-blue-500 p-4">
+                        <h3 class="text-2xl font-bold text-blue-600 mb-2">Opportunities</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Optimize mobile landing pages to boost CVR.</li>
+                            <li>Target "Kitchen Design" & "Doors" in growth regions (KP, Balochistan).</li>
+                            <li>Create content hubs to capture non-branded SEO traffic.</li>
+                            <li>Launch aggressive campaigns targeting competitor keywords.</li>
+                            <li>Leverage Hubspot/Klaviyo for advanced retargeting.</li>
+                        </ul>
+                    </div>
+                    <div class="border-l-4 border-yellow-500 p-4">
+                        <h3 class="text-2xl font-bold text-yellow-600 mb-2">Threats</h3>
+                        <ul class="list-disc list-inside text-gray-700 space-y-1">
+                            <li>Rapid rise of digital-first brands ("Life Standard").</li>
+                            <li>Competitors capturing generic search terms.</li>
+                            <li>Economic pressure favoring lower-cost alternatives.</li>
+                            <li>Potential over-reliance on brand vs. generic SEO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="strategy" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Digital Growth Strategy (A Trends Hive Proposal)</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                To capitalize on these findings, we propose a 3-phase strategy focusing on optimization, expansion, and market domination. This plan leverages existing strengths while directly addressing the competitive threats and optimization gaps.
+            </p>
+            
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h3 class="text-xl font-semibold text-[#0D47A1] mb-6 text-center">Proposed 3-Phase Growth Framework</h3>
+                <div class="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0 md:space-x-4">
+                    <div class="flex-1 text-center border-2 border-[#1976D2] rounded-lg p-6 bg-blue-50">
+                        <span class="text-sm font-semibold text-[#1976D2]">PHASE 1 (Months 1-3)</span>
+                        <h4 class="text-xl font-bold text-gray-900 mt-1">OPTIMIZE</h4>
+                    </div>
+                    <span class="text-4xl font-light text-gray-400">→</span>
+                    <div class="flex-1 text-center border-2 border-[#00796B] rounded-lg p-6 bg-teal-50">
+                        <span class="text-sm font-semibold text-[#00796B]">PHASE 2 (Months 4-9)</span>
+                        <h4 class="text-xl font-bold text-gray-900 mt-1">EXPAND</h4>
+                    </div>
+                    <span class="text-4xl font-light text-gray-400">→</span>
+                    <div class="flex-1 text-center border-2 border-[#FF8F00] rounded-lg p-6 bg-amber-50">
+                        <span class="text-sm font-semibold text-[#FF8F00]">PHASE 3 (Months 10-12+)</span>
+                        <h4 class="text-xl font-bold text-gray-900 mt-1">DOMINATE</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-bold text-[#1976D2] mb-3">Phase 1: OPTIMIZE</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>A/B Test Mobile Landing Pages:</strong> Rework pages for B2C categories (Home Furniture) to improve the 3.8% CTR.</li>
+                        <li><strong>Enhance Desktop Funnels:</strong> Create dedicated, high-intent landing pages for B2B (Office) and high-value B2C (Kitchens) to capitalize on the 7.4% CTR.</li>
+                        <li><strong>Refine Ad Copy:</strong> Ensure ad copy matches device intent (e.g., "Shop Now" for mobile, "Get Quote" for desktop).</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-bold text-[#00796B] mb-3">Phase 2: EXPAND</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Regional SEO/Ad Campaigns:</strong> Launch targeted campaigns for "Kitchen Design" and "Doors" in KP, Balochistan, and Gilgit-Baltistan.</li>
+                        <li><strong>Content Hub Development:</strong> Build SEO-focused content around "modern kitchen design ideas," "office furniture layouts," etc., to capture non-branded search.</li>
+                        <li><strong>Competitor Ad Groups:</strong> Bid directly on rising competitor terms ("Life Standard Furniture") to capture their audience.</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h4 class="text-xl font-bold text-[#FF8F00] mb-3">Phase 3: DOMINATE</h4>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2">
+                        <li><strong>Full-Funnel Retargeting:</strong> Use Klaviyo/Hubspot data to serve dynamic ads based on user behavior (e.g., retarget "Kitchen" browsers with "Door" ads).</li>
+                        <li><strong>Programmatic Display:</strong> Expand reach beyond search to programmatic display ads, targeting users based on demographic and behavioral data.</li>
+                        <li><strong>Brand-Defense Campaigns:</strong> Solidify dominance by bidding aggressively on all brand + category combinations.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <section id="targets" class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Target Audience & Revenue Goals</h2>
+            <p class="text-lg text-gray-700 mb-6">
+                The strategy must serve two distinct audiences: the high-income B2C homeowner and the high-value B2B client. By implementing the proposed strategy, we can set ambitious but achievable goals for the next 12 months.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Persona: B2C Homeowner</h3>
+                    <p class="text-gray-600"><strong>Segments:</strong> "The Renovator" (Kitchens, Doors), "The New Homeowner" (Full Home Furniture), "The Decorator" (Single Items).</p>
+                    <p class="text-gray-600 mt-2"><strong>Key Drivers:</strong> Aesthetics, brand trust, quality, modern design.</p>
+                    <p class="text-gray-600 mt-2"><strong>Primary Channel:</strong> Mobile search, Social Media, Pinterest.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-[#0D47A1] mb-3">Persona: B2B Client</h3>
+                    <p class="text-gray-600"><strong>Segments:</strong> "The Office Manager" (Office Furniture), "The Developer" (Bulk Doors/Kitchens), "The Architect" (Specifications).</p>
+                    <p class="text-gray-600 mt-2"><strong>Key Drivers:</strong> Durability, warranty, bulk pricing, ergonomics, project deadlines.</p>
+                    <p class="text-gray-600 mt-2"><strong>Primary Channel:</strong> Desktop search, LinkedIn, Direct Enquiries.</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h3 class="text-xl font-semibold text-[#0D47A1] mb-4 text-center">Proposed 12-Month Growth Targets</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <span class="text-4xl font-bold text-[#00796B]">5.0%</span>
+                        <span class="block text-gray-600">Increase blended CVR from 4.05%</span>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <span class="text-4xl font-bold text-[#00796B]">5.0%</span>
+                        <span class="block text-gray-600">Increase Mobile CTR from 3.8%</span>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <span class="text-4xl font-bold text-[#00796B]">300+</span>
+                        <span class="block text-gray-600">Achieve Monthly Conversions</span>
+                    </div>
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <span class="text-4xl font-bold text-[#00796B]">20%</span>
+                        <span class="block text-gray-600">Growth in Non-Branded Organic Traffic</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="container mx-auto px-8 py-6 text-center text-gray-600">
+            <p>&copy; 2025 Trends Hive. This report is a confidential analysis prepared for Interwood.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const VIBRANT_PROFESSIONAL = {
+                deepBlue: '#0D47A1',
+                mediumBlue: '#1976D2',
+                lightBlue: '#42A5F5',
+                teal: '#00796B',
+                amber: '#FF8F00',
+                gray: '#B0BEC5'
+            };
+
+            const wrapLabel = (label) => {
+                const maxLen = 16;
+                if (typeof label !== 'string' || label.length <= maxLen) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxLen && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            };
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
+                }
+            };
+            
+            const commonTooltipOptions = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            };
+
+            var ctxPie = document.getElementById('categoryPieChart').getContext('2d');
+            new Chart(ctxPie, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Home Furniture', 'Kitchens', 'Office Furniture', 'Doors', 'Other'],
+                    datasets: [{
+                        data: [35, 30, 20, 10, 5],
+                        backgroundColor: [
+                            VIBRANT_PROFESSIONAL.deepBlue,
+                            VIBRANT_PROFESSIONAL.teal,
+                            VIBRANT_PROFESSIONAL.mediumBlue,
+                            VIBRANT_PROFESSIONAL.amber,
+                            VIBRANT_PROFESSIONAL.gray
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...commonTooltipOptions
+                }
+            });
+
+            var ctxLine = document.getElementById('trendsLineChart').getContext('2d');
+            new Chart(ctxLine, {
+                type: 'line',
+                data: {
+                    labels: [
+                        '2024-10-20', '2024-10-27', '2024-11-03', '2024-11-10', '2024-11-17', '2024-11-24',
+                        '2024-12-01', '2024-12-08', '2024-12-15', '2024-12-22', '2024-12-29', '2025-01-05',
+                        '2025-01-12', '2025-01-19', '2025-01-26', '2025-02-02', '2025-02-09', '2025-02-16',
+                        '2025-02-23', '2025-03-02', '2025-03-09', '2025-03-16', '2025-03-23', '2025-03-30',
+                        '2025-04-06', '2025-04-13', '2025-04-20', '2025-04-27', '2025-05-04', '2025-05-11',
+                        '2025-05-18', '2025-05-25', '2025-06-01', '2025-06-08', '2025-06-15', '2025-06-22',
+                        '2025-06-29', '2025-07-06', '2025-07-13', '2025-07-20', '2025-07-27', '2025-08-03',
+                        '2025-08-10', '2025-08-17', '2025-08-24', '2025-08-31', '2025-09-07', '2025-09-14',
+                        '2025-09-21', '2025-09-28', '2025-10-05', '2025-10-12', '2025-10-19', '2025-10-26'
+                    ],
+                    datasets: [
+                        {
+                            label: 'Furniture',
+                            data: [94, 100, 90, 82, 89, 81, 85, 74, 76, 77, 73, 76, 75, 77, 70, 71, 72, 70, 62, 65, 67, 71, 61, 52, 68, 70, 73, 65, 65, 63, 66, 67, 69, 60, 72, 71, 67, 70, 79, 76, 75, 84, 82, 79, 85, 78, 75, 76, 81, 76, 77, 77, 82, 96],
+                            borderColor: VIBRANT_PROFESSIONAL.deepBlue,
+                            tension: 0.1,
+                            fill: false
+                        },
+                        {
+                            label: 'Kitchen Design',
+                            data: [13, 12, 11, 12, 9, 9, 10, 12, 10, 11, 9, 10, 10, 9, 10, 10, 9, 10, 9, 10, 9, 10, 8, 7, 8, 10, 8, 10, 8, 10, 8, 9, 8, 5, 10, 9, 9, 9, 10, 11, 9, 9, 9, 11, 10, 9, 10, 9, 9, 9, 11, 9, 10, 12],
+                            borderColor: VIBRANT_PROFESSIONAL.teal,
+                            tension: 0.1,
+                            fill: false
+                        },
+                        {
+                            label: 'Doors',
+                            data: [17, 15, 18, 19, 17, 18, 26, 19, 16, 16, 18, 15, 18, 17, 17, 18, 15, 13, 15, 15, 14, 15, 15, 15, 13, 12, 16, 15, 15, 16, 19, 20, 22, 18, 20, 24, 17, 16, 14, 16, 14, 16, 18, 16, 17, 19, 15, 15, 15, 16, 16, 16, 17, 22],
+                            borderColor: VIBRANT_PROFESSIONAL.amber,
+                            tension: 0.1,
+                            fill: false
+                        },
+                        {
+                            label: 'Office Furniture',
+                            data: [3, 4, 3, 4, 3, 3, 3, 3, 3, 4, 4, 4, 5, 3, 3, 4, 4, 3, 3, 3, 4, 2, 2, 2, 3, 3, 4, 2, 3, 4, 3, 3, 3, 2, 3, 3, 3, 2, 4, 2, 2, 3, 3, 3, 4, 3, 3, 4, 4, 3, 3, 3, 3, 2],
+                            borderColor: VIBRANT_PROFESSIONAL.gray,
+                            tension: 0.1,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            ticks: {
+                                maxTicksLimit: 12
+                            }
+                        }
+                    },
+                    ...commonTooltipOptions
+                }
+            });
+
+            var ctxBarRegional = document.getElementById('regionalInterestChart').getContext('2d');
+            new Chart(ctxBarRegional, {
+                type: 'bar',
+                data: {
+                    labels: ['Azad Jammu & Kashmir', 'Gilgit-Baltistan', 'Balochistan', 'Khyber Pakhtunkhwa'],
+                    datasets: [
+                        {
+                            label: 'Kitchen Design (% Interest)',
+                            data: [24, 22, 11, 10],
+                            backgroundColor: VIBRANT_PROFESSIONAL.teal
+                        },
+                        {
+                            label: 'Doors (% Interest)',
+                            data: [25, 28, 23, 22],
+                            backgroundColor: VIBRANT_PROFESSIONAL.amber
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...commonTooltipOptions
+                }
+            });
+
+            var ctxBarDevice = document.getElementById('deviceClicksCostChart').getContext('2d');
+            new Chart(ctxBarDevice, {
+                type: 'bar',
+                data: {
+                    labels: ['Desktop', 'Mobile', 'Tablet'],
+                    datasets: [
+                        {
+                            label: 'Est. Clicks',
+                            data: [452.18, 4891.66, 60.9],
+                            backgroundColor: VIBRANT_PROFESSIONAL.mediumBlue,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Est. Cost (USD)',
+                            data: [156.34, 734.88, 8.78],
+                            backgroundColor: VIBRANT_PROFESSIONAL.amber,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Est. Clicks'
+                            }
+                        },
+                        y1: {
+                            type: 'linear',
+                            display: true,
+                            position: 'right',
+                            title: {
+                                display: true,
+                                text: 'Est. Cost (USD)'
+                            },
+                            grid: {
+                                drawOnChartArea: false
+                            }
+                        }
+                    },
+                    ...commonTooltipOptions
+                }
+            });
+            
+            var ctxPieDevice = document.getElementById('deviceImpressionsChart').getContext('2d');
+            new Chart(ctxPieDevice, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Mobile', 'Desktop', 'Tablet'],
+                    datasets: [{
+                        data: [127111.32, 6101.44, 575.54],
+                        backgroundColor: [
+                            VIBRANT_PROFESSIONAL.mediumBlue,
+                            VIBRANT_PROFESSIONAL.amber,
+                            VIBRANT_PROFESSIONAL.gray
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    ...commonTooltipOptions
+                }
+            });
+
+        };
+    </script>
+</body>
+</html>
